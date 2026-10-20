@@ -2,6 +2,7 @@ import random
 import numpy as np
 
 from myapp.search.objects import Document
+from project_progress.part_1.preprocess import preprocess
 
 
 def dummy_search(corpus: dict, search_id, num_results=20):
@@ -30,6 +31,7 @@ class SearchEngine:
 
         results = []
         ### You should implement your search logic here:
+        preprocessed_data = preprocess(corpus, search_id)
         results = dummy_search(corpus, search_id)  # replace with call to search algorithm
 
         # results = search_in_corpus(search_query)
