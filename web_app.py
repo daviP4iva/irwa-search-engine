@@ -10,6 +10,7 @@ from myapp.search.load_corpus import load_corpus
 from myapp.search.objects import Document, StatsDocument
 from myapp.search.search_engine import SearchEngine
 from myapp.generation.rag import RAGGenerator
+from project_progress.part_1.preprocess import create_index
 from dotenv import load_dotenv
 load_dotenv()  # take environment variables from .env
 
@@ -43,6 +44,9 @@ file_path = path + "/" + os.getenv("DATA_FILE_PATH")
 corpus = load_corpus(file_path)
 # Log first element of corpus to verify it loaded correctly:
 print("\nCorpus is loaded... \n First element:\n", list(corpus.values())[0])
+
+index = create_index(corpus)
+print("\nIndex is processed... \n Finding word 'cotton':\n", index['cotton'])
 
 
 # Home URL "/"
