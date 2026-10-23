@@ -1,0 +1,11 @@
+# Standalone notebook dependencies (Python 3.8+); pip selects compatible releases.
+certifi>=2024.2.2
+ipykernel>=6.16,<7
+matplotlib>=3.7,<4
+nbclient>=0.8,<1
+nbconvert>=7.10,<8
+nbformat>=5.9,<6
+nltk>=3.9,<4
+numpy>=1.24,<3
+pandas>=2.0,<3
+wordcloud>=1.9,<2
